@@ -1,0 +1,96 @@
+.introduce {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	li {
+		border-bottom: 1px solid #eee;
+		&:last-of-type {
+			border: none;
+		}
+		.number {
+			display: block;
+			width: 25px;
+			text-align: center;
+			font-size: 24px;
+			float: left;
+			cursor: pointer;
+		}
+		.top1 {
+			color: #ff0101;
+		}
+		.top2 {
+			color: #ff6b1a;
+		}
+		.top3 {
+			color: #ffa716;
+		}
+		.top4 {
+			color: #9a9a9a;
+		}
+
+		.img {
+			display: none;
+		}
+		.img-block {
+			width: 80px;
+			height: 80px;
+			float: left;
+		}
+		.teacher {
+			width: 210px;
+			float: left;
+			margin-left: 10px;
+			p {
+				font-size: 14px;
+				color: #333;
+
+				float: left;
+			}
+			span {
+				font-size: 12px;
+				color: #999;
+				float: left;
+			}
+		}
+	}
+	.border-no {
+		border: none;
+	}
+	.first {
+		width: 100%;
+		height: 110px;
+		padding: 15px 0;
+		box-sizing: border-box;
+
+		.subject {
+			margin-top: 10px;
+		}
+		.teacher1 {
+			width: 65px;
+			float: left;
+			margin-left: 10px;
+			.name {
+				font-size: 14px;
+				color: #333;
+			}
+			span {
+				font-size: 12px;
+				color: #999;
+			}
+		}
+	}
+	.second {
+		width: 100%;
+		height: 45px;
+		line-height: 45px;
+
+		.subject {
+			display: inline-block;
+			margin-left: 10px;
+		}
+		.class {
+			display: block;
+			float: right;
+		}
+	}
+}

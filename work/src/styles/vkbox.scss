@@ -1,0 +1,138 @@
+.vk_box {
+	width: 940px;
+	background: #f4f4f4;
+	height: 100%;
+	.vk_gg {
+		height: 182px;
+		border: 1px solid #e7e7e7;
+		padding: 20px;
+		box-sizing: border-box;
+		background: #fff;
+		img {
+			width: 100%;
+			height: 100%;
+			border: 1px solid #f4f4f4;
+		}
+	}
+	.vk_con {
+		width: 100%;
+		border: 1px solid #e7e7e7;
+		margin-top: 20px;
+		background: #fff;
+		.title {
+			height: 58px;
+			line-height: 58px;
+			border: 1px solid #e4e4e4;
+			span {
+				display: inline-block;
+				width: 130px;
+				height: 100%;
+				font-size: 16px;
+				color: #333333;
+				position: relative;
+				text-align: center;
+				cursor: pointer;
+				&::after {
+					content: "";
+					width: 1px;
+					height: 18px;
+					background: #e4e4e4;
+					position: absolute;
+					right: 0px;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&.active {
+					color: #30bb5a;
+					&::before {
+						content: "";
+						width: 72px;
+						height: 2px;
+						background: #30bb5a;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						transform: translateX(29px);
+					}
+				}
+			}
+		}
+		ul {
+			box-sizing: border-box;
+			padding: 0 30px;
+			background: #fff;
+			height: 100%;
+			overflow: hidden;
+			.ul_title {
+				margin: 20px 0 7px;
+				height: 33px;
+
+				font-size: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				.all {
+					color: #999;
+
+					cursor: pointer;
+				}
+				.new {
+					cursor: pointer;
+					color: #fff;
+					padding: 9px 18px;
+					border-radius: 3px;
+					background: #30bb5a;
+				}
+			}
+			.li {
+				display: block;
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				background: #f4f4f4;
+				font-size: 14px;
+				margin-bottom: 10px;
+				position: relative;
+				cursor: pointer;
+				.li_text {
+					color: #999;
+					z-index: 1;
+					padding: 0 27px;
+				}
+				.bx {
+					display: none;
+				}
+				&.active,
+				&:hover {
+					background: #e5f2e9;
+					p {
+						color: #30bb5a;
+					}
+					.li_text {
+						display: none;
+					}
+					.bx {
+						padding: 0 27px;
+						display: block;
+					}
+				}
+				.btn {
+					position: absolute;
+					right: 80px;
+					top: 0;
+					z-index: 2;
+					button {
+						height: 40px;
+						border: 0;
+						background: transparent;
+						outline: none;
+						padding: 0 10px;
+						cursor: pointer;
+						font-size: 12px;
+						color: #999999;
+					}
+				}
+			}
+		}
+	}
+}

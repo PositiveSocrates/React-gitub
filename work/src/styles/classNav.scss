@@ -1,0 +1,17 @@
+.class_nav {
+  width: 940px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  border-bottom: 1px solid #eee;
+  li {
+    margin-right: 40px;
+    &:hover {
+      color: rgb(20, 175, 120);
+    }
+  }
+  .class_more {
+    float: right;
+    margin: 0;
+  }
+}

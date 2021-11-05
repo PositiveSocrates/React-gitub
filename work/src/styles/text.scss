@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+li {
+  float: left;
+}
+
+.right {
+  margin: 0;
+}
+
+/* 搜索 */
+.search {
+  width: 1200px;
+  height: 65px;
+  margin: 0 auto;
+  position: relative;
+  /* logo */
+  .search-logo {
+    width: 275px;
+    height: 100%;
+    float: left;
+    img {
+      width: 100%;
+      height: 100;
+    }
+  }
+  /* 我的订阅 */
+  .search-subs {
+    width: 120px;
+    height: 30px;
+    background: #30bb5a;
+    float: right;
+    margin-top: 15px;
+    padding-top: 2px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    img {
+      width: 15px;
+      height: 15px;
+    }
+    span {
+      font-size: 14px;
+      color: white;
+      margin-left: 5px;
+      line-height: 15px;
+    }
+  }
+  /* 搜索框 */
+  .search-inp {
+    width: 510px;
+    height: 50px;
+    margin-top: 10px;
+    float: right;
+    margin-right: 60px;
+    position: relative;
+    margin-top: 15px;
+    .button {
+      height: 30px;
+      .select {
+        width: 60px;
+        height: 17px;
+        text-align: center;
+        font-size: 15px;
+        line-height: 17px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+        border-right: 1px solid #d3d3d3;
+        img {
+          width: 8px;
+          height: 4px;
+        }
+      }
+    }
+    input {
+      width: 385px;
+      height: 26px;
+      padding-left: 70px;
+      border: 2px solid #ff6600;
+      float: left;
+    }
+    button {
+      width: 50px;
+      height: 30px;
+      background: #ff6600;
+      border: none;
+      float: left;
+    }
+    /* 词条 */
+    .search-ul {
+      width: 100%;
+      height: 20px;
+      list-style: none;
+      li {
+        height: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        margin-right: 10px;
+        color: #707070;
+      }
+    }
+  }
+}
+
+/* banner */
+.banner {
+  width: 100%;
+  height: 300px;
+  background: url("./img/bg_19.png");
+}
+/* 内容 */
+/* 第一部分 */
+.content {
+  width: 100%;
+  background: #f4f4f4;
+  padding-top: 30px;
+  // 排行
+  .top {
+    width: 100%;
+    height: 330px;
+    background: white;
+    margin-top: 50px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+  .part1 {
+    width: 1200px;
+    height: 340px;
+    margin: 0 auto;
+    .part1-title {
+      height: 40px;
+    }
+    /* 板块 */
+    .part1-teacher {
+      width: 1200px;
+      margin: 0 auto;
+      height: 300px;
+
+      li {
+        width: 285px;
+        height: 100%;
+        background: white;
+        float: left;
+        margin-right: 20px;
+        &:hover {
+          box-shadow: 1px 1px 8px -1px #666;
+          transition: all 1s;
+        }
+        .introduce {
+          width: 100%;
+          height: 130px;
+          background: #4fbb93;
+          padding: 25px;
+          box-sizing: border-box;
+          position: relative;
+          .introduce-img {
+            width: 80px;
+            height: 80px;
+            float: left;
+          }
+          .introduce-name {
+            width: 155px;
+            text-align: center;
+            float: right;
+            p {
+              color: white;
+              font-size: 12px;
+              padding: 5px 0;
+              box-sizing: border-box;
+            }
+            .name {
+              font-size: 18px;
+            }
+          }
+          /* 标签 */
+          .introduce-label {
+            width: 60px;
+            height: 20px;
+            background: #b68ffd;
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+          }
+          .chemistry,
+          .mathematics {
+            background: #ff7474;
+          }
+        }
+        /* 课程介绍 */
+        .class {
+          width: 100%;
+          height: 165px;
+          padding: 20px 25px;
+          box-sizing: border-box;
+          .class-introduce {
+            font-size: 12px;
+            color: #666666;
+            p {
+              width: 100%;
+              padding: 5px 0px;
+              box-sizing: border-box;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 2;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+            }
+            .hot {
+              display: inline-block;
+              width: 25px;
+              height: 15px;
+              background: red;
+              font-size: 12px;
+              text-align: center;
+              color: white;
+              line-height: 15px;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+      .right {
+        margin: 0;
+      }
+    }
+  }
+  // 第二部分
+  .part2 {
+    width: 1200px;
+    height: 370px;
+
+    margin: 0 auto;
+    margin-top: 30px;
+    // 标题
+    .part2-title {
+      height: 40px;
+      float: left;
+      line-height: 40px;
+    }
+    // 左边
+    .part2-left {
+      width: 900px;
+      height: 100%;
+      float: left;
+      .introduce {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+
+        .part2-more {
+          height: 40px;
+          line-height: 40px;
+        }
+        // 导航
+        .introduce-nav {
+          width: 590px;
+          height: 20px;
+          margin-right: 40px;
+          margin-top: 10px;
+          font-size: 14px;
+          float: right;
+          li {
+            width: 40px;
+            height: 100%;
+            margin-right: 20px;
+            line-height: 20px;
+            color: #39ba5e;
+            text-align: center;
+          }
+          .right {
+            margin: 0;
+          }
+          .active {
+            background: #39ba5e;
+            color: white;
+          }
+        }
+      }
+      // 卡片
+      .cards {
+        margin-top: 10px;
+        width: 100%;
+        height: 330px;
+
+        li {
+          width: 285px;
+          height: 160px;
+          padding: 20px 20px 0;
+          box-sizing: border-box;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          background: white;
+          .part2-top {
+            width: 100%;
+            height: 90px;
+          }
+
+          // 头像
+          .cards-img {
+            width: 70px;
+            height: 70px;
+            float: left;
+          }
+          // 介绍
+          .cards-name {
+            width: 150px;
+            height: 90px;
+            float: right;
+            .name {
+              font-size: 18px;
+              color: #333;
+            }
+            .lable {
+              width: 60px;
+              height: 20px;
+              margin-top: 10px;
+              font-size: 12px;
+              color: white;
+              text-align: center;
+              line-height: 20px;
+              background: #ff7474;
+            }
+            .school {
+              margin-top: 10px;
+              color: #39ba5e;
+              font-size: 12px;
+            }
+          }
+          // 底部
+          .cards-bottom {
+            width: 100%;
+            height: 45px;
+            margin-top: 10px;
+            border-top: 1px solid #eee;
+            padding: 10px 0;
+            box-sizing: border-box;
+            span {
+              display: inline-block;
+              width: 49%;
+              font-size: 14px;
+              text-align: center;
+              color: #999;
+              border-right: 1px solid #eee;
+            }
+            .none {
+              border: none;
+            }
+          }
+        }
+        .right {
+          margin: 0;
+        }
+      }
+    }
+    // 右边
+    .part2-right {
+      width: 285px;
+      height: 100%;
+      float: right;
+      // 标题
+      .introduce-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  // 第三部分
+  .part3 {
+    width: 1200px;
+    height: 370px;
+    margin: 0 auto;
+    margin-top: 30px;
+    .part3-left {
+      width: 900px;
+      height: 100%;
+      float: left;
+      .introduce {
+        width: 100%;
+        height: 40px;
+      }
+      .class {
+        width: 100%;
+        height: 290px;
+        background: white;
+        margin-top: 10px;
+        // 科目
+        .subject {
+          width: 100%;
+          height: 40px;
+          border-bottom: 1px solid #eee;
+          li {
+            height: 40px;
+            padding: 12px 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          .first {
+            margin-left: 20px;
+          }
+        }
+        // 课程
+        .class {
+          width: 100%;
+          height: 100px;
+          padding: 0px 30px;
+          margin: 0;
+          box-sizing: border-box;
+          li {
+            padding: 5px 10px;
+            font-size: 12px;
+            background-color: #f4f4f4;
+            margin-right: 10px;
+            margin-top: 15px;
+            &:hover {
+              color: #30bb5a;
+            }
+          }
+        }
+        // cards
+        .cards {
+          width: 100%;
+          height: 105px;
+          padding: 0 30px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+          li {
+            width: 190px;
+            height: 105px;
+            background: #6d9cb9;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            line-height: 105px;
+            margin-right: 20px;
+          }
+          .bg1 {
+            background: #98bd59;
+          }
+          .bg2 {
+            background: #075143;
+          }
+          .bg3 {
+            background: #b68ffd;
+          }
+        }
+        .s1 {
+          display: inline-block;
+          width: 100%;
+          font-size: 12px;
+          text-align: center;
+          color: #999;
+        }
+      }
+    }
+    // 右边
+    .part3-right {
+      width: 285px;
+      height: 100%;
+      float: right;
+      .top2 {
+        height: 290px;
+        padding-top: 0;
+        line-height: 58px;
+        li {
+          height: 58px;
+          .teacher {
+            height: 58px;
+            line-height: 58px;
+          }
+        }
+      }
+    }
+  }
+}
+.part4-banner {
+  width: 279px;
+  height: 279px;
+  border: 1px solid #eee;
+  background: white;
+  margin-right: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  float: left;
+  .video {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+  }
+  img {
+    width: 245px;
+    height: 210px;
+  }
+}
+.parsing_subjects_ct_box {
+  width: 592px;
+  height: 280px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  float: right;
+  // background: #30bb5a;
+  .flex {
+    margin-right: 20px;
+  }
+  .parsing_subjects_title {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .parsing_subjects_ul {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    white-space: normal;
+    li {
+      width: 78px;
+      height: 78px;
+      border: 1px solid #e7e7e7;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 15px 10px;
+      box-sizing: border-box;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      p {
+        color: #333;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+.parsing_rt_box {
+  width: 285px;
+  height: 310px;
+  float: right;
+  .university {
+    li {
+      border-bottom: 1px solid #e7e7e7;
+      align-items: center;
+      height: 55px;
+      line-height: 55px;
+      img {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        margin-top: 10px;
+        vertical-align: middle;
+        float: left;
+      }
+      p {
+        float: right;
+      }
+    }
+    li:nth-child(1) {
+      border-top: 1px solid #e7e7e7;
+    }
+  }
+}
+.studio_box {
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+  .studio_box_title {
+    width: 100%;
+    height: 40px;
+  }
+  .studio_ct_box {
+    width: 100%;
+    height: 585px;
+    li {
+      background: #fff;
+      width: 218px;
+      height: 314px;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-right: 22px;
+      float: left;
+      img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 15px;
+      }
+      .studio_ct_Name {
+        text-align: center;
+        font-weight: 500;
+        color: #333;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .studio_Class {
+        color: #a7a7a7;
+        font-size: 14px;
+        margin-bottom: 10px;
+        i {
+          font-style: normal;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}

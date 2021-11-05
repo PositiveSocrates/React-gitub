@@ -1,0 +1,15 @@
+.title_box {
+	width: 100%;
+	height: 30px;
+	justify-content: space-between;
+	.title_lt_title {
+		font-size: 18px;
+		color: #333;
+		font-weight: normal;
+	}
+	span {
+		color: #39ba5e;
+		height: 30px;
+		line-height: 30px;
+	}
+}

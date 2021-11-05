@@ -1,35 +1,34 @@
-// Suspense访问页面在加载是不会是空白 有加载图标
-import React, { Component, Suspense, lazy } from 'react';
+import React, { Component } from "react";
+import { withRouter, NavLink, Switch, Redirect, Route } from "react-router-dom";
 
-import { withRouter, NavLink, Switch, Redirect, Route } from 'react-router-dom';
-
-
-// import Input from './views/Input';
-// import Home from './views/Home';
-// import Web from './views/Web';
-
-// 懒加载引入组件的方式，要放在import下面
-const Home = lazy(() => import('./views/Home'));
-const Input = lazy(() => import('./views/Input'));
-const Web = lazy(() => import('./views/Web'));
+import Person from './views/Person'
+import Header from "./components/Header/index";
+import Search from "./components/Search/index";
+import Nav from "./components/Nav/index";
+import Login from './views/Login'
+import Home from "./views/Home/index";
+import Reg from './views/Reg/index'
 
 class App extends Component {
   render() {
     return (
-      <Suspense fallback={<div>Loading...</div>}>
+      <div className="App">
+        <Header />
+        <Search />
+        <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/input" component={Input} />
-          {/* 动态路由 */}
-          <Route exact path="/web" component={Web} />
-          <Route exact path={`/web/:cls`} component={Web} />
-          <Route path={`/web/:cls/:uid`} component={Web} />
+          <Route path="/login" component={Login} />
+          <Route path="/reg" component={Reg} />
+          <Route exact path="/person" component={Person} />
+          <Route exact path="/person/:uid" component={Person} />
+          <Route path="/person/:uid/:type" component={Person} />
 
-          {/* 访问的页面不存在跳到首页/，用来定义404 */}
-          <Redirect to="/" />
         </Switch>
-      </Suspense>
-    )
+      </div>
+    );
   }
+
 }
+
 export default App;

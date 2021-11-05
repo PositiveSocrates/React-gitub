@@ -1,4 +1,13 @@
-body{
-  // 
-}
-@import '_base.scss';
+@import "text.scss";
+@import "header.scss";
+@import "nav.scss";
+@import "search.scss";
+@import "props.scss";
+@import "class.scss";
+@import "ClassNav.scss";
+@import "classBlock.scss";
+@import "block.scss";
+// 个人中心
+@import "person.scss";
+// 分页
+@import "pages.scss";
