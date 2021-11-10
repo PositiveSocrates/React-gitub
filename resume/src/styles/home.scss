@@ -1,0 +1,14 @@
+.home {
+	.left {
+		float: left;
+		div {
+			.link {
+				box-sizing: border-box;
+				padding: 10px;
+			}
+		}
+	}
+	.right {
+		float: left;
+	}
+}

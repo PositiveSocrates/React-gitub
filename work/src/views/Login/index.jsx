@@ -12,7 +12,8 @@ class View extends Component {
 	}
 	// 登录
 	loginFn() {
-		let url = window.sessionStorage.getItem("url");
+		// let url = window.sessionStorage.getItem("url");
+		let url = this.props.location.state.url
 		const { login } = this.state;
 		unit.postApi2(
 			"/api2/login",
@@ -25,8 +26,11 @@ class View extends Component {
 			if (res.data.code === 200) {
 				console.log(res.data);
 				setTimeout(() => {
-					window.sessionStorage.setItem("isLogin", true);
-					window.sessionStorage.setItem("UID", res.data.data.id);
+					// 本地存储的方式
+					// window.sessionStorage.setItem("isLogin", true);
+					// window.sessionStorage.setItem("UID", res.data.data.id);
+					// 动态路由传参的方式
+					this.props.history.push({ pathname: url, state: { isLogin: true, Uid: res.data.data.id } })
 					this.props.history.push(url);
 				}, 3000);
 			}

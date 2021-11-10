@@ -5,11 +5,17 @@ class Com extends Component {
 		super(props);
 	}
 	onLogin() {
-		window.sessionStorage.setItem("url", this.props.match.path);
-		if (!window.sessionStorage.getItem("isLogin")) {
-			this.props.history.push("/login");
+		// window.sessionStorage.setItem("url", this.props.match.path);
+		// if (!window.sessionStorage.getItem("isLogin")) {
+		// 	this.props.history.push("/login");
+		// } else {
+		// 	console.log("您已登录");
+		// } 
+		if (!this.props.location.state) {
+			// this.props.history.push("/login")
+			this.props.history.push({ pathname: '/login', state: { url: this.props.math.path } });
 		} else {
-			console.log("您已登录");
+			console.log("您已经登录")
 		}
 	}
 	toReg() {

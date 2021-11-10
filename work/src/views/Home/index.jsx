@@ -32,16 +32,23 @@ class View extends Component {
 		super(props);
 	}
 	componentDidMount() {
-		this.getUserinfo();
+		// this.getUserinfo();
 	}
 	getUserinfo() {
-		let id = window.sessionStorage.getItem("UID");
-		unit
-			.getApi2(`/api2/userinfo/${id}`, {}, {})
-			.then((res) => {
-				console.log(res);
-			})
-			.catch((err) => console.log(err));
+		// 本地存储的方式
+		// let id = window.sessionStorage.getItem("UID");
+		// 动态路由传参方式
+		if (this.props.location.state.uid == undefined) {
+			console.log("您还没有登录")
+		} else {
+			let id = this.props.location.state.uid
+			unit
+				.getApi2(`/api2/userinfo/${id}`, {}, {})
+				.then((res) => {
+					console.log(res);
+				})
+				.catch((err) => console.log(err));
+		}
 	}
 	render() {
 		return (
